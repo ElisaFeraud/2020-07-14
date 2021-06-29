@@ -3,7 +3,12 @@ package it.polito.tdp.PremierLeague.model;
 public class Team {
 	Integer teamID;
 	String name;
-
+    int punteggio;
+    int vittorie;
+    int sconfitte;
+    int pareggio;
+    int vittorieFuoriCasa;
+    int pareggioFuori;
 	public Team(Integer teamID, String name) {
 		super();
 		this.teamID = teamID;
@@ -54,5 +59,54 @@ public class Team {
 			return false;
 		return true;
 	}
+	
+	public int getPunteggio() {
+		return punteggio;
+	}
+
+	public int getVittorie() {
+		return vittorie;
+	}
+
+	public void setVittorie(int vittorie) {
+		this.vittorie= vittorie;
+	}
+
+	public int getSconfitte() {
+		return sconfitte;
+	}
+
+	public void setSconfitte(int sconfitte) {
+		this.sconfitte = sconfitte;
+	}
+
+	public int getPareggio() {
+		return pareggio;
+	}
+
+	public void setPareggio(int pareggio) {
+		this.pareggio =pareggio;
+	}
+
+	public void calcolaPunteggio() {
+		punteggio = this.vittorie +this.pareggio;
+	}
+
+	public int getVittorieFuoriCasa() {
+		return vittorieFuoriCasa;
+	}
+
+	public void setVittorieFuoriCasa(int vittorieFuoriCasa) {
+		this.vittorieFuoriCasa = vittorieFuoriCasa;
+	}
+
+	public int getPareggioFuori() {
+		return pareggioFuori;
+	}
+
+	public void setPareggioFuori(int pareggioFuori) {
+		this.pareggioFuori = pareggioFuori;
+	}
+	
 	
 }
